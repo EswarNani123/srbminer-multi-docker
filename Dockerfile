@@ -25,7 +25,7 @@ COPY start_zergpool.sh .
 
 RUN chmod +x start_zergpool.sh
 
-#EXPOSE 80
+EXPOSE 80
 
 ENTRYPOINT ["./start_zergpool.sh"]
-#CMD ["--api-enable", "--api-port", "80", "--disable-auto-affinity"]
+CMD ["--api-enable", "--api-port", "80", "--disable-auto-affinity"]
