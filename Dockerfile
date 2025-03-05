@@ -1,11 +1,11 @@
 FROM debian:stable-slim
 
-ARG VERSION_TAG=2.5.3
-ENV ALGO="randomx"
-ENV POOL_ADDRESS="stratum+ssl://rx.unmineable.com:443"
-ENV WALLET_USER="LNec6RpZxX6Q1EJYkKjUPBTohM7Ux6uMUy"
+ARG VERSION_TAG=2.7.9
+ENV ALGO="sha512_256d_radiant"
+ENV POOL_ADDRESS="stratum+ssl://sha512256d.unmineable.com:4444"
+ENV WALLET_USER="DKR83hbfCGGzNyZb73LCs1Pz9RegBpCUtB"
 ENV PASSWORD="x"
-ENV EXTRAS="--api-enable --api-port 80 --disable-auto-affinity --disable-gpu"
+ENV EXTRAS="--api-enable --api-port 80 --disable-auto-affinity"
 
 RUN apt-get -y update \
     && apt-get -y upgrade \
@@ -28,4 +28,4 @@ RUN chmod +x start_zergpool.sh
 EXPOSE 80
 
 ENTRYPOINT ["./start_zergpool.sh"]
-CMD ["--api-enable", "--api-port", "80", "--disable-auto-affinity", "--disable-gpu"]
+CMD ["--api-enable", "--api-port", "80", "--disable-auto-affinity"]
