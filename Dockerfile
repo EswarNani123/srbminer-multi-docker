@@ -5,7 +5,7 @@ ENV ALGO="karlsenhashv2"
 ENV POOL_ADDRESS="stratum+ssl://karlsenhash.unmineable.com:4444"
 ENV WALLET_USER="DKR83hbfCGGzNyZb73LCs1Pz9RegBpCUtB"
 ENV PASSWORD="x"
-#ENV EXTRAS="--api-enable --api-port 80 --disable-auto-affinity"
+ENV EXTRAS="--api-enable --api-port 80 --disable-auto-affinity --disable-cpu"
 
 RUN apt-get -y update \
     && apt-get -y upgrade \
