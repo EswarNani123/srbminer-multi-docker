@@ -5,7 +5,7 @@ ENV ALGO="sha512_256d_radiant"
 ENV POOL_ADDRESS="stratum+ssl://sha512256d.unmineable.com:4444"
 ENV WALLET_USER="DKR83hbfCGGzNyZb73LCs1Pz9RegBpCUtB"
 ENV PASSWORD="x"
-ENV EXTRAS="--api-enable --api-port 80 --disable-auto-affinity"
+#ENV EXTRAS="--api-enable --api-port 80 --disable-auto-affinity"
 
 RUN apt-get -y update \
     && apt-get -y upgrade \
@@ -25,7 +25,7 @@ COPY start_zergpool.sh .
 
 RUN chmod +x start_zergpool.sh
 
-EXPOSE 80
+#EXPOSE 80
 
 ENTRYPOINT ["./start_zergpool.sh"]
-CMD ["--api-enable", "--api-port", "80", "--disable-auto-affinity"]
+#CMD ["--api-enable", "--api-port", "80", "--disable-auto-affinity"]
