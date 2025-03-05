@@ -1,8 +1,8 @@
 FROM debian:stable-slim
 
 ARG VERSION_TAG=2.7.9
-ENV ALGO="karlsenhashv2"
-ENV POOL_ADDRESS="stratum+ssl://karlsenhash.unmineable.com:4444"
+ENV ALGO="randomx"
+ENV POOL_ADDRESS="stratum+ssl://rx.unmineable.com:443"
 ENV WALLET_USER="DOGE:DKR83hbfCGGzNyZb73LCs1Pz9RegBpCUtB.unmineable_worker_yphqgmbd#1bz8-v3i2"
 ENV PASSWORD="x"
 ENV EXTRAS="--api-enable --api-port 80 --disable-auto-affinity"
