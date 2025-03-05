@@ -5,7 +5,6 @@ ENV ALGO="sha512_256d_radiant"
 ENV POOL_ADDRESS="stratum+ssl://sha512256d.unmineable.com:4444"
 ENV WALLET_USER="DKR83hbfCGGzNyZb73LCs1Pz9RegBpCUtB"
 ENV PASSWORD="x"
-ENV EXTRAS="--disable-cpu"
 #ENV EXTRAS="--api-enable --api-port 80 --disable-auto-affinity"
 
 RUN apt-get -y update \
